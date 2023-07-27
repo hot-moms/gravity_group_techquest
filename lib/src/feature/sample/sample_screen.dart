@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.all(15),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -72,17 +72,27 @@ class _MyHomePageState extends State<MyHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         FloatingActionButton(
+                          backgroundColor:
+                              Theme.of(context).colorScheme.primary,
                           onPressed: $weather.updateWeather,
                           tooltip: 'Update weather',
-                          child: const Icon(Icons.cloud),
+                          child: const Icon(
+                            Icons.cloud,
+                            color: Colors.white,
+                          ),
                         ),
                         const SizedBox(
                           height: 15,
                         ),
                         FloatingActionButton(
+                          backgroundColor:
+                              Theme.of(context).colorScheme.primary,
                           onPressed: () => SettingsScope.toggleTheme(context),
                           tooltip: 'Change theme',
-                          child: const Icon(Icons.brush),
+                          child: const Icon(
+                            Icons.brush,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
@@ -96,9 +106,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ScaleExplicitTransition(
                             isExpanded: !$counter.isMaximum,
                             child: FloatingActionButton(
+                              backgroundColor:
+                                  Theme.of(context).colorScheme.primary,
                               onPressed: $counter.increment,
                               tooltip: 'Increment',
-                              child: const Icon(Icons.add),
+                              child: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                           const SizedBox(
@@ -107,9 +122,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           ScaleExplicitTransition(
                             isExpanded: !$counter.isMinimum,
                             child: FloatingActionButton(
+                              backgroundColor:
+                                  Theme.of(context).colorScheme.primary,
                               onPressed: $counter.decrement,
                               tooltip: 'Decrement',
-                              child: const Icon(Icons.remove),
+                              child: const Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ],
