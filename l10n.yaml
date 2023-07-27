@@ -1,0 +1,11 @@
+arb-dir: lib/src/core/localization/translations
+template-arb-file: app_ru.arb
+output-localization-file: generated_localizations.dart
+output-class: GeneratedLocalizations
+nullable-getter: false
+use-deffered-loading: true
+preferred-supported-locales:
+  - ru
+  - en
+# output-dir: lib/src/core/localization/generated
+# synthetic-package: false
